@@ -13,3 +13,8 @@ This repository contains a complete implementation of the GR4DP framework. It in
 1. **Build**:
    ```bash
    docker build -t gr4dp .
+   ```
+2. **Run**:
+   ```bash
+   docker run -p 4000:4000 -p 4001:4001 -p 8000:8000 gr4dp
+   ```
