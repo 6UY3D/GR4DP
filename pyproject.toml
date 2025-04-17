@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "gr4dp"
+version = "1.0.0"
+description = "GR4DP - Production-Ready Distributed AGI System"
+authors = ["YourName <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+torch = "^2.0.0"
+pytorch-lightning = "^2.0.0"
+numpy = "^1.20.0"
+protobuf = "^3.20.0"
+cryptography = "^39.0.0"
+requests = "^2.25.0"
+fastapi = "^0.95.0"
+uvicorn = "^0.22.0"
+sqlalchemy = "^2.0.0"
+scipy = "^1.9.0"
+jinja2 = "^3.1.2"
+
+[tool.poetry.scripts]
+gr4dp = "gr4dp.main:cli_main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

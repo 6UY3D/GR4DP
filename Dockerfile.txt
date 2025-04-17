@@ -1,0 +1,16 @@
+FROM python:3.10-slim
+
+WORKDIR /app
+
+COPY pyproject.toml poetry.lock /app/
+RUN pip install --no-cache-dir poetry && \
+    poetry config virtualenvs.create false && \
+    poetry install --no-interaction --no-ansi
+
+COPY . /app
+
+EXPOSE 4000
+EXPOSE 4001
+EXPOSE 8000
+
+CMD ["python", "-m", "gr4dp.main", "run"]

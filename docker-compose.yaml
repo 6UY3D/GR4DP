@@ -1,0 +1,14 @@
+version: '3'
+services:
+  gr4dp-node:
+    build: .
+    container_name: gr4dp_node
+    restart: unless-stopped
+    ports:
+      - "4000:4000"
+      - "4001:4001"
+      - "8000:8000"
+    volumes:
+      - ./data:/app/data
+    command: >
+      python -m gr4dp.main run
